@@ -1,0 +1,13 @@
+{
+    "sales_order": {
+        "column": {
+            "cricut_id": true
+        },
+        "index": {
+            "SALES_ORDER_CRICUT_ID": true
+        },
+        "constraint": {
+            "SALES_ORDER_CRICUT_ID": true
+        }
+    }
+}

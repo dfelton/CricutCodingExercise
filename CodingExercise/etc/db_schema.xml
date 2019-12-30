@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_order">
+        <column xsi:type="int" name="cricut_id" padding="10" unsigned="true" nullable="true" identity="false" comment="Cricut Id"/>
+        <index referenceId="SALES_ORDER_CRICUT_ID" indexType="btree">
+            <column name="cricut_id"/>
+        </index>
+        <!-- Unique constraint not requested but assumed good to have given nature of column -->
+        <constraint xsi:type="unique" referenceId="SALES_ORDER_CRICUT_ID">
+            <column name="cricut_id"/>
+        </constraint>
+    </table>
+</schema>
