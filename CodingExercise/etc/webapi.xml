@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/cricut/orders/:cricutId" method="GET">
+    
+        <!--
+            FIXME: This should use Cricut\CodingExercise\Api\OrderRepositoryInterface
+            Ran out of time while encountering fatal error. 
+         -->
+        <service class="Cricut\CodingExercise\Model\OrderRepository" method="get"/>
+        <resources>
+            <resource ref="Magento_Sales::actions_view" />
+        </resources>
+    </route>
+</routes>
